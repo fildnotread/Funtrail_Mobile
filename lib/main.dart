@@ -6,5 +6,4 @@ void main() {
   runApp( MaterialApp(
       home: const OnBoardingScreen(),
     ),);
-  // runApp(const App());
 }
