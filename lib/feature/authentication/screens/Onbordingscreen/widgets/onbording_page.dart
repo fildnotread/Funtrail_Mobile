@@ -33,17 +33,13 @@ class OnBoardingpage extends StatelessWidget {
               const SizedBox(height: TSizes.spaceBtwItems),
               Text(
                 title,
-                style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                  color: Colors.black, // Default text color
-                ) ?? TextStyle(color: Colors.black),
+                style: Theme.of(context).textTheme.headlineMedium,
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: TSizes.spaceBtwItems),
               Text(
                 subtitle,
-                style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                  color: Colors.black, // Default text color
-                ) ?? TextStyle(color: Colors.black),
+                style: Theme.of(context).textTheme.bodyMedium,
                 textAlign: TextAlign.center,
               ),
             ],

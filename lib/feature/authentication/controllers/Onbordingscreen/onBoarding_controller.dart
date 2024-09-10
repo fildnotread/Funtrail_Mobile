@@ -7,29 +7,29 @@ class onBordingController extends GetxController {
   static onBordingController get instance => Get.find();
 
   final pageController = PageController();
-  Rx<int> currenPageIndex = 0.obs;
+  Rx<int> currentPageIndex = 0.obs;
 
-  void updatePageindicator(index) => currenPageIndex.value = index;
+  void updatePagendicator(index) => currentPageIndex.value = index;
 
   void dotNavigatorclick(index) {
-    currenPageIndex.value = index;
+    currentPageIndex.value = index;
     pageController.jumpToPage(index);
   }
 
   void nextpage() {
-    if (currenPageIndex.value == 2) {
+    if (currentPageIndex.value == 2) {
       // final Storage = GetStorage();
 
       // Storage.write('key', false);
       Get.offAll(());
     } else {
-      int page = currenPageIndex.value + 1;
+      int page = currentPageIndex.value + 1;
       pageController.jumpToPage(page);
     }
   }
 
   void skippage() {
-    currenPageIndex.value = 3;
+    currentPageIndex.value = 3;
     pageController.jumpToPage(3);
   }
 }

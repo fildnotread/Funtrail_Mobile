@@ -1,8 +1,8 @@
-import 'package:Funtrails/feature/personalization/controllers/onBoarding_controller/onBoarding_controller.dart';
-import 'package:Funtrails/feature/personalization/screens/Boarding_Screen/widgets/onBoarding_indicator.dart';
-import 'package:Funtrails/feature/personalization/screens/Boarding_Screen/widgets/onboarding_skip.dart';
-import 'package:Funtrails/feature/personalization/screens/Boarding_Screen/widgets/onbording_nextpage.dart';
-import 'package:Funtrails/feature/personalization/screens/Boarding_Screen/widgets/onbording_page.dart';
+import 'package:Funtrails/feature/authentication/controllers/Onbordingscreen/onBoarding_controller.dart';
+import 'package:Funtrails/feature/authentication/screens/Onbordingscreen/widgets/onBoarding_indicator.dart';
+import 'package:Funtrails/feature/authentication/screens/Onbordingscreen/widgets/onboarding_skip.dart';
+import 'package:Funtrails/feature/authentication/screens/Onbordingscreen/widgets/onbording_nextpage.dart';
+import 'package:Funtrails/feature/authentication/screens/Onbordingscreen/widgets/onbording_page.dart';
 import 'package:Funtrails/utils/constants/image_strings.dart';
 import 'package:Funtrails/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +20,7 @@ class OnBoardingScreen extends StatelessWidget {
         children: [
           PageView(
             controller: controller.pageController,
-            onPageChanged: controller.updatePageindicator,
+            onPageChanged: controller.updatePagendicator,
             children: const [
               OnBoardingpage(
                 image: TImages.onBoardingImage1,

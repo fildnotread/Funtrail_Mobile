@@ -1,4 +1,5 @@
-import 'package:Funtrails/feature/personalization/controllers/onBoarding_controller/onBoarding_controller.dart';
+
+import 'package:Funtrails/feature/authentication/controllers/Onbordingscreen/onBoarding_controller.dart';
 import 'package:Funtrails/utils/constants/sizes.dart';
 import 'package:Funtrails/utils/device/device_utility.dart';
 import 'package:flutter/material.dart';
