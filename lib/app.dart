@@ -1,6 +1,4 @@
-import 'package:Funtrails/feature/authentication/controllers/Onbordingscreen/onBoarding_controller.dart';
 import 'package:Funtrails/feature/authentication/screens/Onbordingscreen/onBoarding.dart';
-import 'package:Funtrails/feature/authentication/screens/loginpage/Signin.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
@@ -23,7 +21,7 @@ class App extends StatelessWidget {
       darkTheme: TAppTheme.darkTheme,
       debugShowCheckedModeBanner: false,
       // initialBinding: GeneralBinding(),
-           home: const Signin(
+           home: const OnBoardingScreen(
         // backgroundColor: TColors.primary,
         // body: Center(
         //   child: CircularProgressIndicator(

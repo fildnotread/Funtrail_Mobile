@@ -12,7 +12,6 @@ class Tdivider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     final dark = THelperFunctions.isDarkMode(context);
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -24,10 +23,8 @@ class Tdivider extends StatelessWidget {
           indent: 60,
           endIndent: 5,
         )),
-        Text(
-          dividertext,
-          style: Theme.of(context).textTheme.labelMedium,
-        ),
+        Text(dividertext,
+            style: TextStyle(color: dark ? Colors.white : Colors.black)),
         Flexible(
             child: Divider(
           color: dark ? TColors.white : TColors.black,

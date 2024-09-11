@@ -1,5 +1,4 @@
-import 'package:Funtrails/feature/authentication/screens/forget_password_configeration/forget_password.dart';
-import 'package:Funtrails/feature/authentication/screens/signup/signuppage.dart';
+import 'package:Funtrails/feature/authentication/screens/loginpage/Signin.dart';
 import 'package:Funtrails/utils/constants/sizes.dart';
 import 'package:Funtrails/utils/constants/text_strings.dart';
 import 'package:Funtrails/utils/helpers/helper_functions.dart';
@@ -8,10 +7,8 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:iconsax/iconsax.dart';
 
-class signin_from extends StatelessWidget {
-  const signin_from({
-    super.key,
-  });
+class SignupForm extends StatelessWidget {
+  const SignupForm({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +21,7 @@ class signin_from extends StatelessWidget {
         child: Column(
           children: [
             const Text(
-              'SIGN IN',
+              'SIGN UP',
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
@@ -33,12 +30,39 @@ class signin_from extends StatelessWidget {
             const SizedBox(
               height: TSizes.spaceBtwSections,
             ),
-            // Email form
+
+            // Username From
             TextFormField(
-              // Uncomment and configure these if needed
-              // autovalidateMode: AutovalidateMode.always,
-              // controller: controller.email,
-              // validator: (value) => TValidator.validateEmail(value),
+              decoration: InputDecoration(
+                prefixIcon: Icon(Iconsax.user),
+                labelText:
+                    'Username', // Use TTexts.email if you have a localization setup
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: dark ? Colors.white : Colors.black,
+                  ),
+                  borderRadius: BorderRadius.circular(12.0),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: dark ? Colors.green : Colors.green,
+                  ),
+                  borderRadius: BorderRadius.circular(12.0),
+                ),
+                border: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: dark ? Colors.white : Colors.black,
+                  ),
+                  borderRadius: BorderRadius.circular(12.0),
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: TSizes.spaceBtwInputFields,
+            ),
+
+            // Email Form
+            TextFormField(
               decoration: InputDecoration(
                 prefixIcon: Icon(Iconsax.direct_right),
                 labelText:
@@ -66,7 +90,6 @@ class signin_from extends StatelessWidget {
             const SizedBox(
               height: TSizes.spaceBtwInputFields,
             ),
-
             //password form
             TextField(
               decoration: InputDecoration(
@@ -96,35 +119,38 @@ class signin_from extends StatelessWidget {
             ),
 
             const SizedBox(
-              height: TSizes.spaceBtwInputFields / 2,
+              height: TSizes.spaceBtwInputFields,
             ),
 
-            // remember me form
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: [
-                    Checkbox(value: true, onChanged: (Value) {}),
-                    const Text(TTexts.rememberMe)
-                  ],
+            // confirm password from
+            TextField(
+              decoration: InputDecoration(
+                prefixIcon: Icon(Iconsax.password_check),
+                labelText:
+                    'Confirm Password', // Use TTexts.password if you have a localization setup
+                suffixIcon: Icon(Iconsax.eye_slash),
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: dark ? Colors.white : Colors.black,
+                  ),
+                  borderRadius: BorderRadius.circular(12.0),
                 ),
-
-                //forget password form
-                TextButton(
-                    onPressed: () => Get.off(ForgetPasswordScreen()),
-                    // Get.to(() => const /*ForgetPasswordScreen*/ ()),
-                    child: Text(
-                      TTexts.forgetPassword,
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: dark ? Colors.white : Colors.black,
-                      ),
-                    )),
-              ],
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: dark ? Colors.green : Colors.green,
+                  ),
+                  borderRadius: BorderRadius.circular(12.0),
+                ),
+                border: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: dark ? Colors.white : Colors.black,
+                  ),
+                  borderRadius: BorderRadius.circular(12.0),
+                ),
+              ),
             ),
             const SizedBox(
-              height: TSizes.spaceBtwItems,
+              height: TSizes.spaceBtwInputFields * 3,
             ),
 
             //sig-in button
@@ -135,6 +161,10 @@ class signin_from extends StatelessWidget {
                   // onPressed: () => controller.emailAndPasswordSignIn(),
                   child: const Text(TTexts.signIn)),
             ),
+            const SizedBox(
+              height: TSizes.spaceBtwItems,
+            ),
+
             // direct to sign-up form
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -143,7 +173,7 @@ class signin_from extends StatelessWidget {
                 TextButton(
                   onPressed: () {
                     Get.off(
-                        Signuppage()); // Navigate to Signuppage on button press
+                        Signin()); // Navigate to Signuppage on button press
                   },
                   child: Text(
                     "Sign Up",
