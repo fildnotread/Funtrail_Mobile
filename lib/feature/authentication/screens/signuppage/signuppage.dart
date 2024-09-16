@@ -1,7 +1,6 @@
 import 'package:Funtrails/common/widget_login_signup/formdivider.dart';
 import 'package:Funtrails/common/widget_login_signup/socialbtn.dart';
-import 'package:Funtrails/feature/authentication/screens/loginpage/widgets/signin_form.dart';
-import 'package:Funtrails/feature/authentication/screens/signup/widgets/signup_form.dart';
+import 'package:Funtrails/feature/authentication/screens/signuppage/widgets/signup_form.dart';
 import 'package:Funtrails/utils/constants/colors.dart';
 import 'package:Funtrails/utils/constants/sizes.dart';
 import 'package:Funtrails/utils/constants/text_strings.dart';
@@ -49,7 +48,7 @@ class Signuppage extends StatelessWidget {
                 padding: const EdgeInsets.only(
                     left: 30.0,
                     right: 30.0,
-                    bottom: 20.0), // Padding only on specified sides
+                    bottom: 20.0),
                 child: Column(
                   children: [
                     

@@ -31,16 +31,20 @@ class TImages {
   // -- Products
   static const String productImage1 = "";
 
+
   // -- Product Reviews
   static const String userProfileImage1 = "";
 
   //Banners
-  static const String promoBanner1 = "";
 
-  static const String banner1 = "";
+  static const String promoBanner1 = "assets/images/banners/R (2).jpeg";
+  static const String promoBanner2 = "assets/images/banners/illustration-of-travel-using-as-business-web-template-agency-free-vector.jpg";
+  static const String promoBanner3 = "assets/images/banners/Free-Travel-or-Tourism-Social-Media-Banner.jpg";
+  static const String promoBanner4 = "assets/images/banners/1_PVK0CWx0msSno0ZzmPzSNw.png";
+  static const String promoBanner5 = "assets/images/banners/0_TDhbpbYuheFff-fU.jpg";
 
   //Profile
-  static const String user = "assets/images/content/user.png";
+  static const String user = "assets/images/content/user.jpg";
 
   // -- Payment Methods
   static const String applePay = "assets/icons/payment_methods/apple-pay.png";

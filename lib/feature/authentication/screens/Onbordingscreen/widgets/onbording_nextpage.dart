@@ -1,5 +1,5 @@
 import 'package:Funtrails/feature/authentication/controllers/Onbordingscreen/onBoarding_controller.dart';
-import 'package:Funtrails/feature/authentication/screens/loginpage/Signin.dart';
+import 'package:Funtrails/feature/authentication/screens/loginpage/Signinpage.dart';
 import 'package:Funtrails/utils/constants/colors.dart';
 import 'package:Funtrails/utils/constants/sizes.dart';
 import 'package:Funtrails/utils/device/device_utility.dart';
@@ -21,7 +21,7 @@ class OnBoardingScreenNext extends StatelessWidget {
         onPressed: () {
           if (controller.pageController.hasClients) {
             final currentPageIndex = controller.currentPageIndex.value;
-            final totalPages = 3; // Adjust this to the actual number of onboarding pages
+            final totalPages = 3; 
 
             if (currentPageIndex < totalPages - 1) {
               final nextPage = currentPageIndex + 1;
@@ -30,9 +30,9 @@ class OnBoardingScreenNext extends StatelessWidget {
                 duration: const Duration(milliseconds: 300),
                 curve: Curves.easeInOut,
               );
-              controller.currentPageIndex.value = nextPage; // Update the current page index
+              controller.currentPageIndex.value = nextPage; 
             } else {
-              Get.offAll(() => Signin()); // Navigate to Signin page when on the last onboarding page
+              Get.offAll(() => Signin()); 
             }
           }
         },

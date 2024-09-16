@@ -46,9 +46,7 @@ class Signin extends StatelessWidget {
               ),
               child: Padding(
                 padding: const EdgeInsets.only(
-                    left: 30.0,
-                    right: 30.0,
-                    bottom: 20.0), // Padding only on specified sides
+                    left: 30.0, right: 30.0, bottom: 20.0),
                 child: Column(
                   children: [
                     const signin_from(),

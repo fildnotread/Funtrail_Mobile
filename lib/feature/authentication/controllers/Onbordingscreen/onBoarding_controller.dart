@@ -1,4 +1,4 @@
-import 'package:Funtrails/feature/authentication/screens/loginpage/Signin.dart';
+import 'package:Funtrails/feature/authentication/screens/loginpage/Signinpage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';

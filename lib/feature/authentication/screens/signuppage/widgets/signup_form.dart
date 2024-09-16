@@ -1,4 +1,5 @@
-import 'package:Funtrails/feature/authentication/screens/loginpage/Signin.dart';
+import 'package:Funtrails/feature/authentication/screens/loginpage/Signinpage.dart';
+import 'package:Funtrails/feature/authentication/screens/verify/Verify_Page.dart';
 import 'package:Funtrails/utils/constants/sizes.dart';
 import 'package:Funtrails/utils/constants/text_strings.dart';
 import 'package:Funtrails/utils/helpers/helper_functions.dart';
@@ -6,6 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:iconsax/iconsax.dart';
+
+import '../../../../../navigation_menu.dart';
 
 class SignupForm extends StatelessWidget {
   const SignupForm({super.key});
@@ -153,11 +156,11 @@ class SignupForm extends StatelessWidget {
               height: TSizes.spaceBtwInputFields * 3,
             ),
 
-            //sig-in button
+            //sig-Up button
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                  onPressed: () => (),
+                  onPressed: () => Get.off(const VerifyScreen()),
                   // onPressed: () => controller.emailAndPasswordSignIn(),
                   child: const Text(TTexts.signIn)),
             ),

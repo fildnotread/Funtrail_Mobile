@@ -1,4 +1,4 @@
-import 'package:Funtrails/feature/authentication/screens/loginpage/Signin.dart';
+import 'package:Funtrails/feature/authentication/screens/loginpage/Signinpage.dart';
 import 'package:Funtrails/utils/constants/image_strings.dart';
 import 'package:Funtrails/utils/constants/sizes.dart';
 import 'package:Funtrails/utils/constants/text_strings.dart';
