@@ -16,17 +16,21 @@ class TgrideLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
-      itemCount: Itemcout,
-      shrinkWrap: true,
-      padding: EdgeInsets.zero,
-      physics: const NeverScrollableScrollPhysics(),
+      itemCount: Itemcout, // Number of items in the grid
+      shrinkWrap:
+          true, // Makes the GridView take up only as much space as needed
+      padding: EdgeInsets.zero, // No extra padding around the grid
+      physics:
+          const NeverScrollableScrollPhysics(), // Disables the GridView's own scrolling
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
-        mainAxisSpacing: TSizes.gridViewSpacing,
-        crossAxisSpacing: TSizes.gridViewSpacing,
-        mainAxisExtent: mainAxisExtens,
+        crossAxisCount: 2, // Number of columns in the grid
+        mainAxisSpacing:
+            TSizes.gridViewSpacing, // Vertical spacing between items
+        crossAxisSpacing:
+            TSizes.gridViewSpacing, // Horizontal spacing between items
+        mainAxisExtent: mainAxisExtens, // Height of each item
       ),
-      itemBuilder: Itembuiler,
+      itemBuilder: Itembuiler, // Function that builds each item in the grid
     );
   }
 }

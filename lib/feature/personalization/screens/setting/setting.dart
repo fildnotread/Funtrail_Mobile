@@ -1,6 +1,9 @@
+import 'package:Funtrails/feature/authentication/screens/Banking/BankingPage.dart';
 import 'package:Funtrails/feature/authentication/screens/loginpage/Signinpage.dart';
 import 'package:Funtrails/feature/personalization/screens/Favorite/Favorite_Page.dart';
 import 'package:Funtrails/feature/personalization/screens/adressed/addressed.dart';
+import 'package:android_intent_plus/android_intent.dart';
+import 'package:android_intent_plus/flag.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -36,8 +39,8 @@ class Settingscreen extends StatelessWidget {
                           .apply(color: TColors.white),
                     ),
                   ),
-                
-                  // Setting for Image Profile 
+
+                  // Setting for Image Profile
                   TprofileWidget(
                       onPressed: () => Get.to(() => const ProfileScreen())),
                   const SizedBox(
@@ -89,25 +92,22 @@ class Settingscreen extends StatelessWidget {
                     iconss: Iconsax.bag_tick,
                     title: 'My Order',
                     subtitle: 'In-progress or Completed order',
-                    // ontap: () => Get.to(() => const OrderScreen()),
+                    ontap: () => Get.to(() => const CartScreen()),
                   ),
                   Tseetinfmenustyle(
                     iconss: Iconsax.bank,
                     title: 'Bank Account',
                     subtitle: 'Withdraw balances to registered account',
-                    ontap: () {},
+                    ontap: () => Get.to(const BankingScreen()),
                   ),
-                  Tseetinfmenustyle(
-                    iconss: Iconsax.discount_shape,
-                    title: 'My Coupon',
-                    subtitle: 'List of all discounted coupons',
-                    ontap: () {},
-                  ),
-                  Tseetinfmenustyle(
-                    iconss: Iconsax.notification_bing,
+                   Tseetinfmenustyle(
+                    iconss: Iconsax.image,
                     title: 'Notification',
-                    subtitle: 'Set any kind of notification update',
-                    ontap: () {},
+                    subtitle: 'Set Notification for mor Information',
+                    trailing: Switch(
+                      value: true,
+                      onChanged: (value) {},
+                    ),
                   ),
                   Tseetinfmenustyle(
                     iconss: Iconsax.security_safe,
@@ -139,7 +139,7 @@ class Settingscreen extends StatelessWidget {
                     title: 'Geolocation',
                     subtitle: 'Set recommendation based on Location',
                     trailing: Switch(
-                      value: false,
+                      value: true,
                       onChanged: (value) {},
                     ),
                     ontap: () {},
@@ -159,7 +159,7 @@ class Settingscreen extends StatelessWidget {
                     title: 'HD image Quality',
                     subtitle: 'Set image quality to be seen',
                     trailing: Switch(
-                      value: false,
+                      value: true,
                       onChanged: (value) {},
                     ),
                     ontap: () {},
@@ -170,8 +170,8 @@ class Settingscreen extends StatelessWidget {
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
-                      onPressed: () => Get.offAll (const Signin()),
-                          // AuthenticationRepository.instance.logOut(),
+                      onPressed: () => Get.offAll(const Signin()),
+                      // AuthenticationRepository.instance.logOut(),
                       child: const Text('Log Out'),
                     ),
                   ),

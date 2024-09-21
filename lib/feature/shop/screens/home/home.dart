@@ -26,7 +26,7 @@ class Homescreen extends StatelessWidget {
                     height: TSizes.spaceBtwSections,
                   ),
                   Tsearchcontainer(
-                    text: 'Explore...',
+                    text: 'Search to Explore More Information ...',
                     
                   ),
                   SizedBox(
@@ -37,7 +37,7 @@ class Homescreen extends StatelessWidget {
                     child: Column(
                       children: [
                         Tsectionheading(
-                          title: 'Popular Categories',
+                          title: 'Popular Hotels & Restaurants',
                           showactionbtn: false,
                           textcolor: TColors.white,
                         ),

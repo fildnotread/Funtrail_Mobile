@@ -32,7 +32,7 @@ class _AddressedScreenState extends State<AddressedScreen> {
       appBar: Tappbar(
         showbackarrow: true,
         title: Text(
-          'Store',
+          'Address',
           style: Theme.of(context).textTheme.headlineMedium,
         ),
       ),

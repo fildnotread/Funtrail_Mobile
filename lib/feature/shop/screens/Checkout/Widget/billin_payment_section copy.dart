@@ -1,4 +1,6 @@
+import 'package:Funtrails/feature/authentication/screens/Banking/BankingPage.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../../../../common/widgets/custom_shap/containers/Tround_container.dart';
 import '../../../../../common/widgets/text/section_heading.dart';
@@ -18,7 +20,7 @@ class TpaymetnsMethod extends StatelessWidget {
         Tsectionheading(
           title: 'Payment Method',
           buttomtitle: 'Change',
-          onpressed: () {},
+          onpressed: () => Get.to(const BankingScreen()),
         ),
         const SizedBox(
           height: TSizes.spaceBtwItems / 2,
@@ -28,7 +30,7 @@ class TpaymetnsMethod extends StatelessWidget {
             Troundedcontainer(
               width: 60,
               height: 35,
-              backgroundcolor: dark ? TColors.light : TColors.white,
+              backgroundcolor: dark ? TColors.black : TColors.white,
               padding: const EdgeInsets.all(TSizes.sm),
               child: const Image(
                 image: AssetImage(TImages.creditCard),
@@ -48,7 +50,7 @@ class TpaymetnsMethod extends StatelessWidget {
             Troundedcontainer(
               width: 60,
               height: 35,
-              backgroundcolor: dark ? TColors.light : TColors.white,
+              backgroundcolor: dark ? TColors.black : TColors.white,
               padding: const EdgeInsets.all(TSizes.sm),
               child: const Image(
                 image: AssetImage(TImages.paypal),

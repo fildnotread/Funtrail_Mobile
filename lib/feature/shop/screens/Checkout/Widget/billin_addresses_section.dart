@@ -1,4 +1,6 @@
+import 'package:Funtrails/feature/personalization/screens/adressed/addressed.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../../../../common/widgets/text/section_heading.dart';
 import '../../../../../utils/constants/colors.dart';
@@ -15,7 +17,7 @@ class TaddressMethod extends StatelessWidget {
         Tsectionheading(
           title: 'Shipping Addresses',
           buttomtitle: 'Change',
-          onpressed: () {},
+          onpressed: () => Get.to(const AddressedScreen()),
         ),
         Text(
           ' AnLern Book-Store ',

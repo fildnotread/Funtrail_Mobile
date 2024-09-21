@@ -8,8 +8,8 @@ import '../../../../../utils/constants/image_strings.dart';
 import '../../../../../utils/constants/sizes.dart';
 
 
-class Tbrandcard extends StatelessWidget {
-  const Tbrandcard({
+class TbrandcardwidgetRestaurants extends StatelessWidget {
+  const TbrandcardwidgetRestaurants({
     super.key,
     required this.showborder,
     this.ontap,
@@ -45,7 +45,7 @@ class Tbrandcard extends StatelessWidget {
                     brandTextSizes: TextSizes.large,
                   ),
                   Text(
-                    '20 Books',
+                    '20 Menus',
                     overflow: TextOverflow.ellipsis,
                     style: Theme.of(context).textTheme.labelMedium,
                   )

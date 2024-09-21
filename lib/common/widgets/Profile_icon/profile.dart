@@ -45,7 +45,7 @@ class TProfile extends StatelessWidget {
             ),
             child: Center(
               child: Text(
-                '2',
+                '4',
                 style: Theme.of(context).textTheme.labelMedium!.apply(
                       color: dark ? TColors.black : TColors.white,
                       fontSizeFactor: 0.8,

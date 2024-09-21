@@ -1,7 +1,10 @@
 import 'package:Funtrails/feature/personalization/screens/Favorite/Favorite_Page.dart';
-import 'package:Funtrails/feature/shop/screens/Explore/widgets/Tbrandcardwidget.dart';
+import 'package:Funtrails/feature/shop/screens/Explore/widgets/Tbrandcardwidget_Hotels.dart';
+import 'package:Funtrails/feature/shop/screens/Explore/widgets/Tbrandcardwidget_Restaurants.dart';
+import 'package:Funtrails/feature/shop/screens/cart/cart.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:iconsax/iconsax.dart';
 
 import '../../../../common/widgets/appbar/appbar.dart';
 import '../../../../common/widgets/custom_shap/containers/search_container.dart';
@@ -27,12 +30,12 @@ class ExploreScreen extends StatelessWidget {
       child: Scaffold(
           appBar: Tappbar(
             title: Text(
-              'Store',
+              'Explore ...',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
             action: [
               Tcarticons(
-                onPressed: () => Get.to(const FavoriteScreen()),
+          onPressed: () => Get.to(const CartScreen()),
                 iconColor: dark ? TColors.white : TColors.black,
               )
             ],
@@ -52,34 +55,55 @@ class ExploreScreen extends StatelessWidget {
                       physics: const NeverScrollableScrollPhysics(),
                       children: [
                         const SizedBox(
-                          height: TSizes.spaceBtwItems,
+                          height: TSizes.spaceBtwItems / 2,
                         ),
                         const Tsearchcontainer(
-                          text: 'Search for your favorite Books...',
+                          filter: Iconsax.filter,
+                          text: 'Search to Explore More Information ...',
                           showborder: true,
                           shoebackground: false,
                           padding: EdgeInsets.zero,
                         ),
                         const SizedBox(
-                          height: TSizes.spaceBtwSections,
+                          height: TSizes.spaceBtwSections / 2,
                         ),
                         Tsectionheading(
-                          title: 'Owner',
+                          title: 'Top Hotels Owner',
                           showactionbtn: true,
                           // onpressed: () =>
                           //     Get.to(() => const allAuthorscreen()),
                         ),
-                        const SizedBox(
-                          height: TSizes.spaceBtwItems / 2,
+                        SingleChildScrollView(
+                          child: TgrideLayout(
+                            mainAxisExtens: 80,
+                            Itemcout: 2,
+                            Itembuiler: (_, index) {
+                              return const TbrandcardwidgetHotels(
+                                showborder: true,
+                              );
+                            },
+                          ),
                         ),
-                        TgrideLayout(
-                          mainAxisExtens: 80,
-                          Itemcout: 4,
-                          Itembuiler: (_, index) {
-                            return const Tbrandcard(
-                              showborder: true,
-                            );
-                          },
+                        const SizedBox(
+                          height: TSizes.spaceBtwSections / 2,
+                        ),
+                        Tsectionheading(
+                          title: 'Top Restaurants Owner',
+                          showactionbtn: true,
+                          // onpressed: () =>
+                          //     Get.to(() => const allAuthorscreen()),
+                        ),
+                        SingleChildScrollView(
+                          scrollDirection: Axis.vertical,
+                          child: TgrideLayout(
+                            mainAxisExtens: 80,
+                            Itemcout: 2,
+                            Itembuiler: (_, index) {
+                              return const TbrandcardwidgetRestaurants(
+                                showborder: true,
+                              );
+                            },
+                          ),
                         ),
                       ],
                     ),

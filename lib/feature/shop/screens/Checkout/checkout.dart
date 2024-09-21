@@ -43,7 +43,6 @@ class CheckOutScreen extends StatelessWidget {
               const TcatItemsRestaurans(
                 showaddremovebtn: false,
               ),
-              // const Tcouponcode(),
               const SizedBox(
                 height: TSizes.spaceBtwSections,
               ),

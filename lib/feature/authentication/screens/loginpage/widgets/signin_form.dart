@@ -40,7 +40,7 @@ class signin_from extends StatelessWidget {
             TextFormField(
               // Uncomment and configure these if needed
               // autovalidateMode: AutovalidateMode.always,
-              // controller: controller.email,
+            // controller: controller.email,
               // validator: (value) => TValidator.validateEmail(value),
               decoration: InputDecoration(
                 prefixIcon: Icon(Iconsax.direct_right),
@@ -101,7 +101,7 @@ class signin_from extends StatelessWidget {
             const SizedBox(
               height: TSizes.spaceBtwInputFields / 2,
             ),
-
+              
             // remember me form
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,

@@ -1,4 +1,5 @@
 import 'package:Funtrails/feature/personalization/screens/Favorite/Favorite_Page.dart';
+import 'package:Funtrails/feature/shop/screens/cart/cart.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -12,7 +13,7 @@ class Tcarticons extends StatelessWidget {
     this.iconColor,
     this.counterBgColor,
     this.counterTextColor,
-  });
+});
 
   final VoidCallback onPressed;
   final Color? iconColor;
@@ -26,13 +27,33 @@ class Tcarticons extends StatelessWidget {
     return Stack(
       children: [
         IconButton(
-          onPressed: () => Get.to(() => const FavoriteScreen()),
+          onPressed: () => Get.to(() => const CartScreen()),
           icon: Icon(
-            Iconsax.favorite_chart,
+            Iconsax.shopping_cart,
             color: iconColor ?? (dark ? TColors.white : TColors.black),
           ),
         ),
-        
+        Positioned(
+          right: 0,
+          child: Container(
+            width: 18,
+            height: 18,
+            decoration: BoxDecoration(
+              color: counterBgColor ??
+                  (dark ? TColors.white : TColors.black.withOpacity(0.8)),
+              borderRadius: BorderRadius.circular(100),
+            ),
+            child: Center(
+              child: Text(
+                '4',
+                style: Theme.of(context).textTheme.labelMedium!.apply(
+                      color: dark ? TColors.black : TColors.white,
+                      fontSizeFactor: 0.8,
+                    ),
+              ),
+            ),
+          ),
+        ),
       ],
     );
   }
