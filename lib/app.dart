@@ -1,11 +1,14 @@
-
-import 'package:Funtrails/binding/general_binding.dart';
-import 'package:Funtrails/utils/constants/colors.dart';
+import 'package:Funtrails/feature/authentication/screens/Onbordingscreen/onBoarding.dart';
+import 'package:Funtrails/navigation_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 import 'utils/constants/text_strings.dart';
 import 'utils/theme/theme.dart';
+
+void main() {
+  runApp(const App());
+}
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -19,13 +22,13 @@ class App extends StatelessWidget {
       darkTheme: TAppTheme.darkTheme,
       debugShowCheckedModeBanner: false,
       // initialBinding: GeneralBinding(),
-           home: const Scaffold(
-        backgroundColor: TColors.primary,
-        body: Center(
-          child: CircularProgressIndicator(
-            color: Colors.white,
-          ),
-        ),
+           home: const Navigationsbarmenu(
+        // backgroundColor: TColors.primary,
+        // body: Center(
+        //   child: CircularProgressIndicator(
+        //     color: Colors.white,
+        //   ),
+        // ),
       ), 
     );
   }

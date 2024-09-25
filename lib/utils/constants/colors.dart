@@ -43,4 +43,9 @@ class TColors {
   static const Color softGrey = Color(0xFFF4F4F4);
   static const Color lightGrey = Color(0xFFF9F9F9);
   static const Color white = Color(0xFFFFFFFF);
+
+  // Card Color
+  static const Color ligh_blue = Color(0XFF039BE5);
+  static const Color dark_blue = Color(0XFF01579B);
+  static const Color darkest_blue = Color(0Xff0d47a1);
 }
