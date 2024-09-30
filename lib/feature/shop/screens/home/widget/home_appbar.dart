@@ -1,11 +1,11 @@
 import 'package:Funtrails/feature/personalization/screens/setting/setting.dart';
+import 'package:Funtrails/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../../../common/widgets/appbar/appbar.dart';
 import '../../../../../common/widgets/Profile_icon/profile.dart';
 import '../../../../../utils/constants/colors.dart';
 import '../../../../../utils/constants/text_strings.dart';
-
 
 class ThomeAppbar extends StatelessWidget {
   const ThomeAppbar({
@@ -14,6 +14,7 @@ class ThomeAppbar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final dark = THelperFunctions.isDarkMode(context);
     // final controller = Get.put(Usercontroller());
     return Tappbar(
       title: Column(
@@ -21,17 +22,15 @@ class ThomeAppbar extends StatelessWidget {
         children: [
           Text(
             TTexts.homeAppbarTitle,
+            style: Theme.of(context).textTheme.labelMedium!.apply(color: dark ? TColors.white : TColors.dark),
+          ),
+          Text(
+            'User11725112',
             style: Theme.of(context)
                 .textTheme
-                .labelMedium!
-                .apply(color: TColors.grey),
+                .headlineMedium!
+                .apply(color: dark ? TColors.white : TColors.dark),
           ),
-          Text('User11725112',
-                style: Theme.of(context)
-                    .textTheme
-                    .headlineMedium!
-                    .apply(color: TColors.white),
-              ),
           // Obx(() {
           //   if (controller.profileloading.value) {
           //     return const TshimmerEffect(width: 80, height: 15);

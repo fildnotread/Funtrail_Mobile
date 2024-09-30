@@ -8,6 +8,7 @@ import 'package:camera/camera.dart'; // Import for camera
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:animations/animations.dart'; // Import for page transition animations
 import 'utils/helpers/helper_functions.dart';
 
 class Navigationsbarmenu extends StatefulWidget {
@@ -93,7 +94,18 @@ class _NavigationsbarmenuState extends State<Navigationsbarmenu> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: Obx(
-        () => controller.screens[controller.selectedIndex.value],
+        () => PageTransitionSwitcher(
+          duration: const Duration(milliseconds: 500),
+          reverse: controller.selectedIndex.value < controller.previousIndex.value,
+          transitionBuilder: (Widget child, Animation<double> primaryAnimation, Animation<double> secondaryAnimation) {
+            return FadeThroughTransition(
+              animation: primaryAnimation,
+              secondaryAnimation: secondaryAnimation,
+              child: child,
+            );
+          },
+          child: controller.screens[controller.selectedIndex.value], // Render selected page with animation
+        ),
       ),
     );
   }
@@ -101,6 +113,7 @@ class _NavigationsbarmenuState extends State<Navigationsbarmenu> {
 
 class Navigationcontroller extends GetxController {
   final Rx<int> selectedIndex = 0.obs;
+  var previousIndex = 0.obs; // Store previous index
 
   final List<Widget> screens = [
     const Homescreen(),
@@ -110,7 +123,8 @@ class Navigationcontroller extends GetxController {
   ];
 
   void onTabSelected(int index) {
-    selectedIndex.value = index;
+    previousIndex.value = selectedIndex.value; // Update previous index
+    selectedIndex.value = index; // Update selected index
   }
 }
 

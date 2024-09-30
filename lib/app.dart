@@ -1,4 +1,3 @@
-import 'package:Funtrails/feature/authentication/screens/Onbordingscreen/onBoarding.dart';
 import 'package:Funtrails/navigation_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';

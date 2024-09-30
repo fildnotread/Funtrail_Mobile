@@ -35,7 +35,7 @@ class ExploreScreen extends StatelessWidget {
             ),
             action: [
               Tcarticons(
-          onPressed: () => Get.to(const CartScreen()),
+                onPressed: () => Get.to(const CartScreen()),
                 iconColor: dark ? TColors.white : TColors.black,
               )
             ],
@@ -57,12 +57,8 @@ class ExploreScreen extends StatelessWidget {
                         const SizedBox(
                           height: TSizes.spaceBtwItems / 2,
                         ),
-                        const Tsearchcontainer(
-                          filter: Iconsax.filter,
-                          text: 'Search to Explore More Information ...',
-                          showborder: true,
-                          shoebackground: false,
-                          padding: EdgeInsets.zero,
+                        const SearchInput(
+                          hintText: 'Exploring ...',
                         ),
                         const SizedBox(
                           height: TSizes.spaceBtwSections / 2,

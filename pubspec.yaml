@@ -21,6 +21,7 @@ dependencies:
   flutter_native_splash: ^2.3.1
   smooth_page_indicator: ^1.2.0+3
   android_intent_plus: ^2.0.3
+  animations: ^2.0.1
 
   # Icons
   iconsax: ^0.0.8
